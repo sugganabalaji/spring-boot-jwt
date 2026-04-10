@@ -74,6 +74,20 @@ It provides user registration, login, and role-based access control, serving as 
 2. 	Login → receive JWT token
 3. 	Access protected endpoints with token
 
+### 🔎 Understanding JWTs with [jwt.io](https://jwt.io/)
+When working with `JSON Web Tokens (JWT)`, it’s often useful to inspect and debug the tokens your application generates. The site [jwt.io](https://www.jwt.io/) provides a free, interactive tool where you can:
+- **Decode JWTs**: Paste a token to view its header, payload, and signature in human‑readable form.
+- **Verify signatures**: Check if the token is correctly signed using your secret or public key.
+- **Experiment with claims**: Add or modify claims (like `sub`, `exp`, `roles`) to understand how they affect authentication.
+- **Learn the structure**: JWTs are composed of three parts — header, payload, and signature — all base64‑encoded.
+#### Example Workflow
+- Generate a JWT by logging in to your Spring Boot app.
+- Copy the token from the response header or body.
+- Paste it into [jwt.io](https://jwt.io/).
+- Inspect the claims (e.g., `username`, `roles`, `expiry`).
+- Verify the signature using your secret key to ensure integrity.
+
+
 ### ✅ Future Enhancements
 - Refresh tokens for extended sessions
 - Password reset via email
